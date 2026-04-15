@@ -138,7 +138,7 @@ print(message*8)
 # concatenate the message "lets learn" to the message
 newMsg="lets learn "+message
 print(newMsg)
-# print characters from index 3 to 8
+### print characters from index 3 to 8
 print(message[3:9])
 
 # vishnukala.m@faithinfotech.in
