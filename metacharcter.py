@@ -17,7 +17,7 @@ print(result)
 result=re.findall('po...s',mytxt)
 print(result)
 
-# ^ check if the entire string starts with the substring
+# ^ check if the entire string starts with the substring , works multiline
 mytxt="my fav flowers are jasmineflower and sunflower"
 #find all substring starting with 'jasmine
 result=re.findall('^m',mytxt)
@@ -31,3 +31,22 @@ print(result)
 #\A used to find if a string is starting with substring 
 mytxt="my fav flowers are jasmineflower and sunflower"
 result=re.findall('\Ajasmine',mytxt)
+
+#checking using string boundary sequence
+#\b to check the string boundary
+result=re.findall(r'\ba',mytxt)
+print(result)
+
+#check for all substrs ending with 'flower
+result=re.findall(r'flower\b',mytxt)
+print(result)
+
+#checks for all substrs exactly 'sunflower
+result=re.findall(r'\bsunflower\b',mytxt)
+print(result)
+
+#Q : write reg expression to find email in a string
+mytxt='my mail is mygmail@gmail.com'
+myregex=r'\S+@\S+'
+result=re.findall(myregex,mytxt)
+print(result)
