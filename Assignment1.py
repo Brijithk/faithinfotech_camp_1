@@ -1,0 +1,27 @@
+#1
+fruits=['apple','mango','orange','lemon','banana']
+print(fruits)
+#2
+print(fruits[2])
+#3
+fruits[1]="grapes"
+print(fruits)
+#4
+fruits.append("kiwi")
+print(fruits)
+#5
+fruits.insert(2,"pineapple")
+print(fruits)
+#6
+fruits.remove("banana")
+print(fruits)
+#7
+print(fruits[:3])
+#8
+print("apple" in fruits)
+#9
+fruits.sort()
+print(fruits)
+#10
+fruits.reverse()
+print(fruits)
