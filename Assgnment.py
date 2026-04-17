@@ -30,11 +30,19 @@ s1='Yn'
 s2='PYnative'
 print(s2.index(s1))
 #10    - not completed  
-#ujse rfind
-str = 'Emma is a data scientist who knows Python. Emma works at google.'
-occurance=re.search("Emma",str)
-print(occurance.group())
+s = "Emma is a data scientist who knows Python. Emma works at google."
+pos = s.rfind("Emma")
+print("Last position:", pos)
 #11
+s = 'ABCDEFGHI'
+
+part_length = len(s) // 3
+
+part1 = s[0:part_length]
+part2 = s[part_length:2*part_length]
+part3 = s[2*part_length:]
+
+print(part1, part2, part3)
 #12
 str = 'madam'
 revStr=str[::-1]
@@ -47,11 +55,32 @@ print(newStr.count("USA"))
 str = 'PYnative'
 print(str[::-1])
 #15
-#16
-#17
-#18
-str = 'Apple'
+s = "Emma is a data scientist who knows Python. Emma works at google."
 
+index = s.rfind('Emma')
+print(index)
+#16
+s = 'Emma-is-a-data-scientist'
+
+result = ' '.join(s.split('-'))
+print(result)
+#17
+s = '/*Jon is @developer & musician!!'
+
+result = ''.join(char for char in s if char.isalpha() or char == ' ')
+print(result)
+#18
+s = 'Apple'
+
+freq = {}
+
+for char in s:
+    if char in freq:
+        freq[char] += 1
+    else:
+        freq[char] = 1
+
+print(freq)
 #19
 str = 'Python is fun'
 strArr=str.split(" ")
@@ -61,3 +90,22 @@ for i in strArr:
     newStr=newStr+" "+rev
 print(newStr.lstrip())
 #20
+s = '(())()'
+
+count = 0
+balanced = True
+
+for char in s:
+    if char == '(':
+        count += 1
+    elif char == ')':
+        count -= 1
+    
+    if count < 0:
+        balanced = False
+        break
+
+if count == 0 and balanced:
+    print("Balanced")
+else:
+    print("Not Balanced")
