@@ -43,8 +43,8 @@ print('delhi' in Cities)
 Sports=('cricket','football','hockey','tennis')
 print(len(Sports))
 #19
-value='Python'
-print(value*4)
+value=('Python')
+print((value+" ")*4)
 #20
 del value
 print(value)
