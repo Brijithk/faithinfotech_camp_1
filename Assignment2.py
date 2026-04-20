@@ -63,5 +63,55 @@ for i in lst:
         all_even=False
         break
 print(all_even)
-
-
+# 16. Given: t=(10,20,30,40) → Print first & last
+t=(10,20,30,40)
+print(t[0])
+print(t[-1])
+# 17. Given: t=(5,15,25) → Find length. 
+t=(5,15,25)
+print(len(t))
+# 18. Given: t=(1,2,2,3) → Count 2. 
+t=(1,2,2,3)
+print(t.count(2))
+# 19. Given: t=(10,20,30) → Find index of 30. 
+t=(10,20,30)
+print(t.index(30))
+# 20. Given: t=(7,14,21) → Convert to list. 
+t=(7,14,21)
+print(list(t))
+# 21. Given: t=(45,12,78,34) → Find max & min. 
+t=(45,12,78,34)
+print(max(t))
+print(min(t))
+# 22. Given: t=(1,2,3,4) → Slice first 2 elements.
+t=(1,2,3,4)
+print(t[:1])
+# 23. Given: t=(5,6,7) → Concatenate (8,9). 
+t=(5,6,7)
+print(t+(8,9))
+# 24. Given: d={'a':1,'b':2} → Print values
+d={'a':1,'b':2}
+print(d.values())
+#  25. Given: d={'name':'John','age':20} → Access age.
+# print(d.age)
+# 26. Given: d={'name':'Bob'} → Add age=25
+d={'name':'Bob'}
+d.update({'age':25})
+print(d)
+# 27. Given: d={'marks':70} → Update marks to 90. 
+d={'marks':70}
+d.update({'marks':90})
+print(d)
+# 28. Given: d={'x':1,'y':2} → Remove key 'x'. 
+d={'x':1,'y':2}
+d.pop('x')
+print(d)
+# 29. Given: d={'a':1,'b':2} → Get keys and values. 
+d={'a':1,'b':2}
+print(d.keys())
+print(d.values())
+# 30. Given: d1={'a':1}, d2={'b':2} → Merge dictionaries
+d1={'a':1}
+d2={'b':2}
+d1.update(d2)
+print(d1)
