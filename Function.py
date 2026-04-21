@@ -1,0 +1,17 @@
+funcrions in python
+----------------------------
+A function in python is a reusable block of code designed to perform a specific task.
+A function help in a modular programming , improving code readability,maintability and reusability
+
+
+Advantages of python
+----------------------------------
+promotes code readability
+reduces code redundancy
+improves readability
+simplifies debugging and testing
+
+
+how to create a function
+------------------------------
+define a function using the def keyword , followed by the function names and paranthesis().
