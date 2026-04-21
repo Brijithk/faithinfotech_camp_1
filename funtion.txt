@@ -23,3 +23,25 @@ def Hello():
 How to call a function
 -----------------------
 hello()
+
+
+Difference between print and return
+------------------------------------
+print
+-used to display output to the console
+-it doesnot return any value to the caller
+-primarily used for debugging and user interaction
+return
+-used to send value back to the calling function
+-enables further processing of the result
+-essential for writing reusable and modular code
+
+
+parameters vd arguments
+---------------------------
+parameters
+-variables defined inside the function declaration
+-acts as place holder for the incomming values
+
+arguments
+-actual value passsed through the function during a function call.
