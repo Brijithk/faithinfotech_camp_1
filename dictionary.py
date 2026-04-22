@@ -61,7 +61,29 @@ def login():
     else:
         print("invalid credentials")
         return False
-    
+
+
+#---------------------  
+#Add book
+#-----------------------
+def add_book():
+    book_id=input("Enter book id:")
+    if book_id in library:
+        print("Book id already exists ...")
+
+    title=input("Enter book title:")
+    author=input("Enter author name:")
+    price=float(input("Enter price..."))
+
+    library[book_id]={
+        "title":title,
+        "author":author,
+        "price":price
+    }
+print("Book added successfully")
+
+
+
 #--------------------------------
 #Menu Function
 #-------------------------------
@@ -75,4 +97,23 @@ def menu():
         print("4.search Book")
         print("5.delete Book")
         print("6.Exit")
+
+        choice=input("Enter your choice from 1 to 6 :")
+        if choice=="1":
+            #add book
+        elif choice=="2":
+            #edit book
+        elif choice=="3":
+            #list book
+        elif choice=="4":
+            #search book
+        elif choice=="5":
+            #delete book
+        elif choice=="6":
+            #exit
+            break
+        else:
+            print("Invalid choice")
+
+
 
