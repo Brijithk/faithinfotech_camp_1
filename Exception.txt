@@ -1,0 +1,31 @@
+Exceptions in Python
+-----------------------------
+it is a way to deal with errors that may occur during the execution of the program
+Errors can occur for various reasons such as:
+    invalid input,file not found, or division by zero
+    Exception handling allows us to gracefully handle these errors without causing the program to crash.
+
+try block
+-------------
+try block is used to enclose the code that might raise an exception.
+
+
+Except block
+--------
+the except block is used to handle specific exception that occurs within the try block
+we can have multiple except block to handle different kind of exception
+
+
+else block
+----------------
+the else block is executed if no exception occurs in try block.it is typically used to execut that should run
+onlly if no exception occurs.
+the else block is optional
+
+finally block
+------------
+the finally block is always executed regradlesss of whether an exception occurs or not.
+it is usualy used to perform cleanup operation such as closing files or releasing resources.
+
+
+
