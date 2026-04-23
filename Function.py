@@ -132,7 +132,35 @@
 # • Remove one item from the list. 
 # • Print the total number of items in the list. 
 
-list=['carrot','onion']
-list.append('beetroot')
-list.append('lactusse')
-print(list)
+# list=['carrot','onion']
+# list.append('beetroot')
+# list.append('lactusse')
+# print(list)
+# list[]
+num=1
+l=[1,1]
+li=[]
+
+for i in range(1,6):
+    x=0
+    y=1
+    for j in range(i):
+    #         l[j-]
+    #     print(num,end='')
+    # print()
+        if j==0:
+            print(1,end="")
+            li.append(1)
+        elif j!=i-1:
+            print(l[x]+l[y],end="")
+            li.append(l[x]+l[y])
+        else:
+            print(1,end="")
+            li.append(1)
+        if y!=len(l)-1:
+            x+=1
+            y+=1
+    print()
+
+    
+    

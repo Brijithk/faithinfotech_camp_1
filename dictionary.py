@@ -70,7 +70,8 @@ def add_book():
     book_id=input("Enter book id:")
     if book_id in library:
         print("Book id already exists ...")
-
+        #it prevents the program from continuing and adding  the book  again
+        return
     title=input("Enter book title:")
     author=input("Enter author name:")
     price=float(input("Enter price..."))
@@ -82,7 +83,75 @@ def add_book():
     }
 print("Book added successfully")
 
+#---------------------
+#Edit book
+#--------------------
 
+def edit_book():
+    book_id=input("Enter book id to edit")
+    if book_id not in library:
+        print("Book not found")
+        return
+    print("leave blank to keep old value")
+
+    title=input("enter new title")
+    author=input("enter author")
+    price=input("enter price")
+
+    if title:
+        library[book_id]["title"]=title
+    if author:
+        library[book_id]["author"]=author
+    if price:
+        library[book_id]["price"]=float(price)
+
+    print("Book updated successfully!\n")
+
+#-----------------------
+#list all books
+#------------------------
+def list_books():
+    if not library:
+        print("No books available\n")
+        return
+    print("--------------------")
+    for book_id,details in library.items():
+        print("Book ID",book_id)
+        print("Title:",details["title"])
+        print("Author",details["author"])
+        print("price",details["price"])
+        print("------------------------")
+    print()
+
+#-----------------------------
+#Search Book
+#-----------------------------
+
+def search_book():
+    book_id=int(input("Enter book id to search: "))
+    if book_id in library:
+        details=library[book_id]
+        print("Book Found!")
+        print("Title",details["title"])
+        print("Author",details["author"])
+        print("Price",details["price"])
+    else:
+        print("Book not found")
+    print()
+
+#----------------
+#delete book
+#--------------
+
+def delete_book():
+    book_id=int(input("Enter book id to delete:"))
+
+    if book_id in library:
+        del library[book_id]
+        print("Book deleted successfully!")
+    else:
+        print("Book not found!")
+    print()
 
 #--------------------------------
 #Menu Function
@@ -100,20 +169,26 @@ def menu():
 
         choice=input("Enter your choice from 1 to 6 :")
         if choice=="1":
-            #add book
+            add_book()
         elif choice=="2":
-            #edit book
+            edit_book()
         elif choice=="3":
-            #list book
+            list_books()
         elif choice=="4":
-            #search book
+            search_book
         elif choice=="5":
-            #delete book
+            delete_book
         elif choice=="6":
-            #exit
+            print("exiting program...")
             break
         else:
             print("Invalid choice")
 
 
+#--------------------------------
+#Main program
+#--------------
 
+
+if login():
+    menu()
