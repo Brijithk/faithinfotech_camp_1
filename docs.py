@@ -135,11 +135,4 @@
 # • Remove a subject from the dictionary. 
 # • Loop through the dictionary and print all subjects with their marks.
 
-marks={"math":78,"science":33,"english":98,"history":11,"computer":54}
-print(marks["math"])
-marks["tamil"]=100
-print(marks)
-del marks["tamil"]
-print(marks)
-for key,values in marks.items():
-    print("subject :",key,"values :",values)
+# marks={"math":78,"science":33,"english":98,"history"=-9
