@@ -136,3 +136,23 @@
 # • Loop through the dictionary and print all subjects with their marks.
 
 # marks={"math":78,"science":33,"english":98,"history"=-9
+arr=[1,2,3,4,5,6,7,8,9]
+key=9
+def binarysearch(arr,key):
+    low=0
+    high=len(arr)-1
+    while low<=high:
+        mid=(high+low)//2
+        if key<arr[mid]:
+            high=mid-1
+        elif key>arr[mid]:
+            low=mid+1
+        else:
+            return mid
+op=binarysearch(arr,key)
+if op==-1:
+    print("not found")
+else:
+    print("found at :",op)
+        
+
